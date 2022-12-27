@@ -65,8 +65,22 @@ if task == 24:
     rand = []
     for i in range (N):
         rand.append(random.randint(0, 10))
-    print (rand)
+    
+    if N == 0:
+        print("Плохой из вас фермер")
+        quit()
 
+    elif N == 1:
+        print(f"Всего лишь один куст, на котором растет {rand} ягод(-а)(-ы)")
+        quit()
+
+    elif N == 2:
+        print (rand)
+        print(f"Наверное, урожай был уничтожен, из-за чего осталось всего 2 куста, с которых можно собрать только {rand[0] + rand [1]} ягод")
+        quit()
+
+    else:    
+        print (rand)
 
     result = rand[0] + rand [1] + rand [2]
     k = N
